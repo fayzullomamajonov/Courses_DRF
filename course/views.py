@@ -12,20 +12,20 @@ from rest_framework.permissions import IsAuthenticated
 # ******************************************************
 # It is generics 
 
-# class CourseList(generics.ListCreateAPIView):
-#     queryset = CourseModel.objects.all()
-#     serializer_class = CourseSerializer
+class CourseList(generics.ListCreateAPIView):
+    queryset = CourseModel.objects.all()
+    serializer_class = CourseSerializer
 
 
-# class CourseUpdateAPIView(generics.UpdateAPIView):
-#     queryset = CourseModel.objects.all()
-#     serializer_class = CourseSerializer
-#     lookup_field = "pk"
+class CourseUpdateAPIView(generics.UpdateAPIView):
+    queryset = CourseModel.objects.all()
+    serializer_class = CourseSerializer
+    lookup_field = "pk"
 
-# class CourseDeleteAPIView(generics.DestroyAPIView):
-#     queryset = CourseModel.objects.all()
-#     serializer_class = CourseSerializer
-#     lookup_field = 'pk'
+class CourseDeleteAPIView(generics.DestroyAPIView):
+    queryset = CourseModel.objects.all()
+    serializer_class = CourseSerializer
+    lookup_field = 'pk'
     
 
 # ******************************************************
@@ -78,7 +78,7 @@ from rest_framework.permissions import IsAuthenticated
 
 # It is ViewSet
 
-class CourseViewSet(viewsets.ModelViewSet):
-    serializer_class = CourseSerializer
-    queryset = CourseModel.objects.all()
-    permission_classes = [IsAuthenticated]
+# class CourseViewSet(viewsets.ModelViewSet):
+#     serializer_class = CourseSerializer
+#     queryset = CourseModel.objects.all()
+#     permission_classes = [IsAuthenticated]
